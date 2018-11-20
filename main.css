@@ -1,70 +1,34 @@
 body{
-    padding: 0dp;
-    background: #e74c3c;
-    margin: 0dp;
+    padding: 0;
+    margin: 0
 }
 
-.search-box{
+.image-container{
     left: 50%;
     top: 50%;
     position: absolute;
     transform: translate(-50%,-50%);
-    background: #2c3e50;
-    height: 40px;
-    border-radius: 40px;
-    padding: 10px;
+    width: 1024px;
+    height: 480px;
+    background-size: 100%;
+    background-image: url("one.jpg");
+    animation: fade 20s infinite;
 }
 
-
-.search-button{
-    color:#f1c40f;
-    height: 40px;
-    width: 40px;
-    background: #2c3e50;
-    justify-content: center;
-    align-items: center;
-    float: right;
-    border-radius: 50%;
-    display: flex;
-    flex: 1;
-    text-decoration: none;
-}   
-
-.search-box:hover .search-text{
-    width: 240px;
-    padding: 0 ;
-}
-
-.search-text:focus{
-    width: 240px;
-    padding: 0 ;
-}
-
-.search-text {
-    border: none;
-    outline: none;
-    background: none;
-    height: 40px;
-    float: left;
-    transition: .4s;
-    color: white;
-    width: 0px;
-    font-size: 16px;
-}
-
-
-@media screen and (max-width: 700px){
-    .search-box:hover .search-text{
-        width: 130px;
-        padding: 0 ;
+@keyframes fade{
+    25%{
+        background: url("two.jpeg")
     }
 
-    .search-text:focus{
-        width: 130px;
-        padding: 0 ;
+    50%{
+        background: url("three.jpg")
     }
-    
-    body{
-        background-color: rebeccapurple;
+
+    75%{
+        background: url("four.jpg")
+    }
+
+    100%{
+        background: url("one.jpg")
     }
 }
